@@ -6,7 +6,7 @@
 | 4  |  프로그래머스  | https://school.programmers.co.kr/learn/courses/30/lessons/42885  |          |        |
 | 5  |  프로그래머스  | https://school.programmers.co.kr/learn/courses/30/lessons/150368 |          |        |
 | 6  | backjoon | https://www.acmicpc.net/problem/7569                             |          |        |
-| 7  | backjoon | https://www.acmicpc.net/problem/14916                            |    O     |   dp   |
+| 7  | backjoon | https://www.acmicpc.net/problem/2294                           |    O     |   dp   |
 | 8  | backjoon | https://www.acmicpc.net/problem/11725                            |          |        |
 | 9  | backjoon | https://www.acmicpc.net/problem/4796                             |          |        |
 | 10 | backjoon | https://www.acmicpc.net/problem/1012                             |    O     |  bfs   |
