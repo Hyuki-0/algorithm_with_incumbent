@@ -14,7 +14,7 @@ public class Level2_개인정보수집유효기간 {
    * -> 반드시 한 개 이상의 파기 계약이 존재한다.
    * -> 당일까지도 포함한다.
    *
-   * 2. 해결 : 단순 Greedy 구현 
+   * 2. 해결 : 단순 Greedy 구현
    * */
 
   static List<Integer> terminate_contract = new ArrayList<>();
@@ -26,13 +26,13 @@ public class Level2_개인정보수집유효기간 {
       contracts.put(proceed[0], Integer.parseInt(proceed[1]));
     }
 
-    int todayToDay = toDay(today.split("\\."), "");
+    int days = convertToDays(today.split("\\."), "");
 
     for (int i = 0; i < privacies.length; i++) {
       String[] privacy = privacies[i].split(" ");
-      int expiredDate = toDay(privacy[0].split("\\."), privacy[1]);
+      int expiredDays = convertToDays(privacy[0].split("\\."), privacy[1]);
 
-      if(expiredDate <= todayToDay) {
+      if(expiredDays <= days) {
         terminate_contract.add(i+1);
       }
     }
@@ -40,7 +40,7 @@ public class Level2_개인정보수집유효기간 {
     return terminate_contract.stream().mapToInt(Integer::intValue).toArray();
   }
 
-  public static int toDay(String[] date, String contract) {
+  public static int convertToDays(String[] date, String contract) {
     int today =  (12 * 28 * Integer.parseInt(date[0])) + (28 * Integer.parseInt(date[1])) + Integer.parseInt(date[2]);
 
     if(!contract.isBlank()) {
